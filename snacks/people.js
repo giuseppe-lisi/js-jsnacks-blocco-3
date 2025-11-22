@@ -12,8 +12,8 @@ const people = [
 
 ];
 
-const canDrive = people.map(person => 
-    person.age >= 18 ? {...person, 'can-drive': 'Può guidare'} : {...person, 'can-drive' : 'Non può guidare'}
-);
+const canDrive = people.map(person => {
+    return person.age >= 18 ? {...person, 'can-drive': 'Può guidare'} : {...person, 'can-drive' : 'Non può guidare'}
+});
 
 console.log(canDrive);

@@ -18,7 +18,7 @@ const petrolCars = [];
 const dieselCars = [];
 const otherCars = [];
 
-cars.map(car => {
+for (const car of cars) {
     if(car.fuel === 'Benzina') {
         petrolCars.push(car);
     } else if (car.fuel === 'Diesel') {
@@ -26,8 +26,16 @@ cars.map(car => {
     } else {
         otherCars.push(car);
     }
-});
+}
 
 console.log(petrolCars);
 console.log(dieselCars);
 console.log(otherCars);
+
+// È ovviamente più conciso farlo con il filter
+
+// const petrolCars = cars.filter(car => car.fuel === 'Benzina');
+// const dieselCars = cars.filter(car => car.fuel === 'Diesel');
+// const otherCars = cars.filter(car => !(car.fuel === 'Diesel' || car.fuel === 'Benzina'));
+
+// ma usando il for iteriamo per il ciclo una volta soltanto
